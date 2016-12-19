@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/WiFiFriend/WiFiFriend.iml" filepath="$PROJECT_DIR$/WiFiFriend/WiFiFriend.iml" />
+      <module fileurl="file://$PROJECT_DIR$/WifiFriend.iml" filepath="$PROJECT_DIR$/WifiFriend.iml" />
+    </modules>
+  </component>
+</project>
