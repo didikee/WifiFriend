@@ -9,6 +9,7 @@
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/WiFiFriend" />
+            <option value="$PROJECT_DIR$/wifimanager" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />

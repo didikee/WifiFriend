@@ -47,7 +47,7 @@ public class MainActivity extends AppCompatActivity {
                 wifiManager.startScan();
             }
         });
-        
+
         wifiManager = (WifiManager) getSystemService(WIFI_SERVICE);        //获得系统wifi服务
         connectManager = (ConnectivityManager) getSystemService(CONNECTIVITY_SERVICE);
     }
