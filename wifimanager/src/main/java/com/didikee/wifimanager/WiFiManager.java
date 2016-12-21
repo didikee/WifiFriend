@@ -7,5 +7,7 @@ package com.didikee.wifimanager;
  */
 
 public class WiFiManager {
+    public static void main(){
 
+    }
 }
