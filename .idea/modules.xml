@@ -3,10 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/WiFiFriend/WiFiFriend.iml" filepath="$PROJECT_DIR$/WiFiFriend/WiFiFriend.iml" />
-      <module fileurl="file://$PROJECT_DIR$/WiFiFriend/WiFiFriend.iml" filepath="$PROJECT_DIR$/WiFiFriend/WiFiFriend.iml" />
       <module fileurl="file://$PROJECT_DIR$/WifiFriend.iml" filepath="$PROJECT_DIR$/WifiFriend.iml" />
-      <module fileurl="file://$PROJECT_DIR$/WifiFriend.iml" filepath="$PROJECT_DIR$/WifiFriend.iml" />
-      <module fileurl="file://$PROJECT_DIR$/wifimanager/wifimanager.iml" filepath="$PROJECT_DIR$/wifimanager/wifimanager.iml" />
       <module fileurl="file://$PROJECT_DIR$/wifimanager/wifimanager.iml" filepath="$PROJECT_DIR$/wifimanager/wifimanager.iml" />
     </modules>
   </component>
