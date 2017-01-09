@@ -5,6 +5,14 @@ package com.didikee.wifimanager.interf;
  */
 
 public interface IWifiConnHelper extends IHelper{
+    /**
+     * 无密码,直连
+     */
     void connByNull();
+
+    /**
+     * 密码连接
+     * @param password 密码
+     */
     void connByPassword(String password);
 }
