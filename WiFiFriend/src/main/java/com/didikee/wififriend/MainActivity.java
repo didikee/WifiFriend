@@ -9,6 +9,7 @@ import android.view.View;
 import android.widget.Button;
 
 import com.didikee.wififriend.adapters.WiFiAdapter;
+import com.didikee.wififriend.interf.OnRvItemClickListener;
 import com.didikee.wifimanager.WiFiManagerHelper;
 import com.didikee.wifimanager.interf.OnWifiScanResultChangeListener;
 
@@ -58,6 +59,13 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onChange(List<ScanResult> scanResults) {
                 wiFiAdapter.setScanResults(scanResults);
+            }
+        });
+
+        wiFiAdapter.setItemClickListener(new OnRvItemClickListener<ScanResult>() {
+            @Override
+            public void onRvItemClick(View view, int position, ScanResult scanResult) {
+
             }
         });
 

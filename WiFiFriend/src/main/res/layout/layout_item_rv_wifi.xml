@@ -4,6 +4,8 @@
                 android:layout_height="48dp"
                 android:background="@drawable/md_ripple_white"
                 android:clickable="true"
+                android:paddingLeft="@dimen/md_normal_margin"
+                android:paddingRight="@dimen/md_normal_margin"
     >
 
     <ImageView
@@ -28,7 +30,7 @@
         android:id="@+id/tv_name"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
-        android:paddingLeft="12dp"
+        android:paddingLeft="@dimen/md_normal_margin"
         android:layout_toLeftOf="@+id/iv_action"
         android:layout_toRightOf="@+id/iv_show"
         android:gravity="center_vertical"

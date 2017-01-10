@@ -32,5 +32,5 @@ dependencies {
 
 
 
-    compile 'com.didikee:UILibrary:0.8.7'
+    compile 'com.didikee:UILibrary:0.8.8'
 }
