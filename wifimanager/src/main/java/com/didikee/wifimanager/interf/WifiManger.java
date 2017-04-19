@@ -8,7 +8,7 @@ import java.util.List;
  * Created by didik on 2016/12/21.
  */
 
-public interface IWifiMangerHelper {
+public interface WifiManger {
     void open();
     void close();
     void update();

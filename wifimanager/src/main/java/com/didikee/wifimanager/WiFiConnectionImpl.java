@@ -5,6 +5,7 @@ import android.net.wifi.WifiManager;
 import com.didikee.wifimanager.interf.IWifiConnHelper;
 import com.didikee.wifimanager.model.WifiIPInfo;
 import com.didikee.wifimanager.model.WifiProxyInfo;
+import com.didikee.wifimanager.interf.WifiConnection;
 
 /**
  * Created by didik on 2016/12/21.

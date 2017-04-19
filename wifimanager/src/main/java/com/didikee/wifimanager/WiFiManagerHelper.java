@@ -11,7 +11,7 @@ import android.net.wifi.WifiInfo;
 import android.net.wifi.WifiManager;
 import android.util.Log;
 
-import com.didikee.wifimanager.interf.IWifiMangerHelper;
+import com.didikee.wifimanager.interf.WifiManger;
 import com.didikee.wifimanager.interf.OnWifiScanResultChangeListener;
 
 import java.util.List;
@@ -31,7 +31,7 @@ import java.util.List;
  *
  */
 
-public class WiFiManagerHelper implements IWifiMangerHelper{
+public class WiFiManagerHelper implements WifiManger {
 
     private final Context context;
     private final WifiManager wifiManager;
