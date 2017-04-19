@@ -35,6 +35,7 @@ public class WiFiManagerHelper implements IWifiMangerHelper{
 
     private final Context context;
     private final WifiManager wifiManager;
+    private boolean isRegister = false;
 
     public WiFiManagerHelper(Context context) {
         this.context = context;
@@ -50,11 +51,14 @@ public class WiFiManagerHelper implements IWifiMangerHelper{
     public void open() {
         wifiManager.setWifiEnabled(true);
         wifiManager.startScan();
+        registerReceiver();
+        isRegister = true;
     }
 
     @Override
     public void close() {
         wifiManager.setWifiEnabled(false);
+        unRegisterReceiver();
     }
 
     @Override
@@ -63,11 +67,17 @@ public class WiFiManagerHelper implements IWifiMangerHelper{
             open();
             return;
         }
+
+        if (!isRegister){
+            registerReceiver();
+            isRegister = true;
+        }
         wifiManager.startScan();
     }
 
     @Override
     public void registerReceiver() {
+        if (isRegister)return;
         IntentFilter filter = new IntentFilter();
         // filter.addAction(WifiManager.ERROR_AUTHENTICATING);
         filter.addAction(WifiManager.ACTION_PICK_WIFI_NETWORK);

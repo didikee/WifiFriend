@@ -3,7 +3,7 @@ package com.didikee.wififriend.utils;
 import android.text.TextUtils;
 import android.util.Log;
 
-import com.didikee.wififriend.app.Dev;
+import com.didikee.wififriend.constant.Config;
 
 /**
  * Created by didik 
@@ -12,7 +12,7 @@ import com.didikee.wififriend.app.Dev;
  */
 
 public class DevLog {
-    public static final boolean OpenLog = Dev.Debug;
+    public static final boolean OpenLog = Config.Debug;
 
     public static final String SEPARATOR = ",";
     public static void v(String message) {

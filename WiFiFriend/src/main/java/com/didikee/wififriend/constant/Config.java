@@ -1,4 +1,4 @@
-package com.didikee.wififriend.app;
+package com.didikee.wififriend.constant;
 
 /**
  * Created by didik 
@@ -6,6 +6,6 @@ package com.didikee.wififriend.app;
  * Description: 
  */
 
-public class Dev {
+public class Config {
     public static final boolean Debug = true;
 }
