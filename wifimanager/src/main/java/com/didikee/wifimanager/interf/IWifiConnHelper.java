@@ -1,5 +1,8 @@
 package com.didikee.wifimanager.interf;
 
+import com.didikee.wifimanager.model.WifiIPInfo;
+import com.didikee.wifimanager.model.WifiProxyInfo;
+
 /**
  * Created by didik on 2016/12/21.
  */
@@ -15,4 +18,12 @@ public interface IWifiConnHelper extends IHelper{
      * @param password 密码
      */
     void connByPassword(String password);
+
+    /**
+     * 高级链接,包含代理设置等
+     * @param password
+     * @param proxyInfo
+     * @param ipInfo
+     */
+    void connByProxy(String password, WifiProxyInfo proxyInfo, WifiIPInfo ipInfo);
 }

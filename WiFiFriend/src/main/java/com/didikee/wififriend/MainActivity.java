@@ -17,7 +17,7 @@ import com.didikee.wififriend.adapters.WiFiAdapter;
 import com.didikee.wififriend.interf.OnRvItemClickListener;
 import com.didikee.wififriend.utils.DevLog;
 import com.didikee.wifimanager.WiFiManagerHelper;
-import com.didikee.wifimanager.interf.OnWifiScanResultChangeListener;
+import com.didikee.wifimanager.listener.OnWifiScanResultChangeListener;
 
 import java.util.ArrayList;
 import java.util.List;

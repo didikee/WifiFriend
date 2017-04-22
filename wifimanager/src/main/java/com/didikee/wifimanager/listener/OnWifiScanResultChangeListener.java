@@ -1,4 +1,4 @@
-package com.didikee.wifimanager.interf;
+package com.didikee.wifimanager.listener;
 
 import android.net.wifi.ScanResult;
 

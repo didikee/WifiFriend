@@ -5,16 +5,15 @@ import android.net.wifi.WifiManager;
 import com.didikee.wifimanager.interf.IWifiConnHelper;
 import com.didikee.wifimanager.model.WifiIPInfo;
 import com.didikee.wifimanager.model.WifiProxyInfo;
-import com.didikee.wifimanager.interf.WifiConnection;
 
 /**
  * Created by didik on 2016/12/21.
  */
 
-public class WiFiConnHelper implements IWifiConnHelper {
+public class WiFiConnectionImpl implements IWifiConnHelper {
     private final WifiManager wifiManager;
 
-    public WiFiConnHelper(WifiManager wifiManager) {
+    public WiFiConnectionImpl(WifiManager wifiManager) {
         this.wifiManager = wifiManager;
     }
 

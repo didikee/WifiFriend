@@ -12,7 +12,7 @@ import android.net.wifi.WifiManager;
 import android.util.Log;
 
 import com.didikee.wifimanager.interf.WifiManger;
-import com.didikee.wifimanager.interf.OnWifiScanResultChangeListener;
+import com.didikee.wifimanager.listener.OnWifiScanResultChangeListener;
 
 import java.util.List;
 
