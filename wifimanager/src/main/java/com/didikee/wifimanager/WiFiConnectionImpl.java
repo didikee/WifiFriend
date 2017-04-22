@@ -3,7 +3,7 @@ package com.didikee.wifimanager;
 import android.net.wifi.WifiManager;
 
 import com.didikee.wifimanager.interf.IWifiConnHelper;
-import com.didikee.wifimanager.model.WifiIPInfo;
+import com.didikee.wifimanager.model.WifiInfo;
 import com.didikee.wifimanager.model.WifiProxyInfo;
 
 /**
@@ -28,7 +28,7 @@ public class WiFiConnectionImpl implements IWifiConnHelper {
     }
 
     @Override
-    public void connByProxy(String password, WifiProxyInfo proxyInfo, WifiIPInfo ipInfo) {
+    public void connByProxy(String password, WifiProxyInfo proxyInfo, WifiInfo wifiInfo) {
 
     }
 

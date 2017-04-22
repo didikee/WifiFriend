@@ -1,6 +1,6 @@
 package com.didikee.wifimanager.interf;
 
-import com.didikee.wifimanager.model.WifiIPInfo;
+import com.didikee.wifimanager.model.WifiInfo;
 import com.didikee.wifimanager.model.WifiProxyInfo;
 
 /**
@@ -25,5 +25,5 @@ public interface IWifiConnHelper extends IHelper{
      * @param proxyInfo
      * @param ipInfo
      */
-    void connByProxy(String password, WifiProxyInfo proxyInfo, WifiIPInfo ipInfo);
+    void connByProxy(String password, WifiProxyInfo proxyInfo, WifiInfo ipInfo);
 }

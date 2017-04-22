@@ -8,4 +8,10 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    
+    <!--alert dialog-->
+    <style name="AlertDialog.Self" parent="Theme.AppCompat.Dialog.Alert">
+
+    </style>
+
 </resources>
