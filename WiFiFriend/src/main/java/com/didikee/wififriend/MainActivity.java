@@ -93,6 +93,7 @@ public class MainActivity extends AppCompatActivity {
 
     private void init() {
 //        recyclerView.setAdapter(adapter);
+        //test
     }
 
     //将搜索到的wifi根据信号强度从强到弱进行排序
