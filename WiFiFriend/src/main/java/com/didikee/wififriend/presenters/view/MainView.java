@@ -1,6 +1,6 @@
 package com.didikee.wififriend.presenters.view;
 
-import com.didikee.wifimanager.model.WifiInfo;
+import com.didikee.wifimanager.model.WifiProxyInfo;
 
 /**
  * Created by didikee on 2017/4/22.
@@ -18,5 +18,5 @@ public interface MainView {
      */
     void connection2Wifi(boolean withProxy);
 
-    void updateWifiInfo(WifiInfo wifiInfo);
+    void updateWifiInfo(WifiProxyInfo wifiProxyInfo);
 }

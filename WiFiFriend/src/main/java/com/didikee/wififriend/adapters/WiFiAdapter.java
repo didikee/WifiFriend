@@ -39,7 +39,7 @@ public class WiFiAdapter extends RecyclerView.Adapter<WiFiAdapter.ViewHolder> {
         final ScanResult scanResult = scanResults.get(position);
         int level = WifiManager.calculateSignalLevel(scanResult.level, 4);
         holder.iv_show.setImageResource(WiFiResUtil.getLockWifiIconByLevel(level));
-        holder.tv_name.setText("等级: "+level);
+        holder.tv_name.setText("等级: "+level+"SSID: "+scanResult.SSID);
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

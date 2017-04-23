@@ -7,14 +7,17 @@
     >
 
     <EditText
+        android:id="@+id/et_pwd"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
     <CheckBox
+        android:id="@+id/cb_show_pwd"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="显示密码"
         />
     <CheckBox
+        android:id="@+id/cb_advance"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="显示高级选项"

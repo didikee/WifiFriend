@@ -11,8 +11,9 @@ import android.net.wifi.WifiInfo;
 import android.net.wifi.WifiManager;
 import android.util.Log;
 
-import com.didikee.wifimanager.interf.WifiManger;
+import com.didikee.wifimanager.interf.IWifiManger;
 import com.didikee.wifimanager.listener.OnWifiScanResultChangeListener;
+import com.didikee.wifimanager.model.WifiProxyInfo;
 
 import java.util.List;
 
@@ -31,39 +32,41 @@ import java.util.List;
  *
  */
 
-public class WiFiManagerHelper implements WifiManger {
+public class WiFiManagerHelper implements IWifiManger {
 
     private final Context context;
-    private final WifiManager wifiManager;
+    private final WifiManager mWifiManager;
     private boolean isRegister = false;
+
+    private WiFiConnectionImpl mWifiConnectionImpl;
 
     public WiFiManagerHelper(Context context) {
         this.context = context;
-        wifiManager= (WifiManager) context.getSystemService(Context.WIFI_SERVICE);
+        mWifiManager = (WifiManager) context.getApplicationContext().getSystemService(Context.WIFI_SERVICE);
         initWifi();
     }
 
     private void initWifi(){
-
+        mWifiConnectionImpl = new WiFiConnectionImpl(mWifiManager);
     }
 
     @Override
     public void open() {
-        wifiManager.setWifiEnabled(true);
-        wifiManager.startScan();
+        mWifiManager.setWifiEnabled(true);
+        mWifiManager.startScan();
         registerReceiver();
         isRegister = true;
     }
 
     @Override
     public void close() {
-        wifiManager.setWifiEnabled(false);
+        mWifiManager.setWifiEnabled(false);
         unRegisterReceiver();
     }
 
     @Override
     public void update() {
-        if (!wifiManager.isWifiEnabled()){
+        if (!mWifiManager.isWifiEnabled()){
             open();
             return;
         }
@@ -72,7 +75,7 @@ public class WiFiManagerHelper implements WifiManger {
             registerReceiver();
             isRegister = true;
         }
-        wifiManager.startScan();
+        mWifiManager.startScan();
     }
 
     @Override
@@ -102,17 +105,29 @@ public class WiFiManagerHelper implements WifiManger {
         }
     }
 
+    @Override
+    public WifiInfo getCurrentConnectionWifiInfo() {
+       return mWifiManager.getConnectionInfo();
+    }
+
+    @Override
+    public boolean connectWiFi(WifiProxyInfo wifiProxyInfo) {
+        mWifiConnectionImpl.updateWIfiModel(wifiProxyInfo);
+        mWifiConnectionImpl.connect();
+        return false;
+    }
+
 
     private BroadcastReceiver wifiBroadcastReceiver =new BroadcastReceiver() {
         @Override
         public void onReceive(Context context, Intent intent) {
-            List<ScanResult> scanResults = wifiManager.getScanResults();
+            List<ScanResult> scanResults = mWifiManager.getScanResults();
             onScanResultChange(scanResults);
             String action = intent.getAction();
             Log.e("WifiReceiver", action);
             // / Wifi 状态变化
             if (WifiManager.SUPPLICANT_STATE_CHANGED_ACTION.equals(action)) {
-                WifiInfo info = wifiManager.getConnectionInfo();
+                WifiInfo info = mWifiManager.getConnectionInfo();
                 SupplicantState state = info.getSupplicantState();
                 if (state == SupplicantState.COMPLETED) {
                     Log.e("WifiReceiver", "(验证成功)");

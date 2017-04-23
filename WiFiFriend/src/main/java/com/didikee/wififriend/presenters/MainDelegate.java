@@ -1,7 +1,7 @@
 package com.didikee.wififriend.presenters;
 
 import com.didikee.wififriend.presenters.view.MainView;
-import com.didikee.wifimanager.model.WifiInfo;
+import com.didikee.wifimanager.model.WifiProxyInfo;
 
 /**
  * Created by didikee on 2017/4/22.
@@ -21,7 +21,9 @@ public class MainDelegate implements MainView {
     }
 
     @Override
-    public void updateWifiInfo(WifiInfo wifiInfo) {
+    public void updateWifiInfo(WifiProxyInfo wifiProxyInfo) {
 
     }
+
+
 }

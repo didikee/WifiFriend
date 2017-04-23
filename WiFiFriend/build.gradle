@@ -33,4 +33,6 @@ dependencies {
 
     // add test code
     compile 'com.didikee:UILibrary:0.8.8'
+    // ui toast
+    compile 'com.didikee:uitoast:0.1.0'
 }

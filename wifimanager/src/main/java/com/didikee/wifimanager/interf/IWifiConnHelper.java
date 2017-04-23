@@ -1,29 +1,26 @@
 package com.didikee.wifimanager.interf;
 
-import com.didikee.wifimanager.model.WifiInfo;
-import com.didikee.wifimanager.model.WifiProxyInfo;
-
 /**
  * Created by didik on 2016/12/21.
  */
 
 public interface IWifiConnHelper extends IHelper{
-    /**
-     * 无密码,直连
-     */
-    void connByNull();
 
     /**
-     * 密码连接
-     * @param password 密码
+     * 判断采用何种连接,包括连接之前连接过的WiFi热点
      */
-    void connByPassword(String password);
+    boolean connect();
 
     /**
-     * 高级链接,包含代理设置等
-     * @param password
-     * @param proxyInfo
-     * @param ipInfo
+     * 加锁,防止休眠
      */
-    void connByProxy(String password, WifiProxyInfo proxyInfo, WifiInfo ipInfo);
+    void lock();
+
+    void unLock();
+
+    /**
+     * 忘记当前连接的WiFi密码
+     * @return 是否操作成功
+     */
+    boolean forgetWIFI();
 }

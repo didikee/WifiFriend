@@ -4,6 +4,10 @@
     <color name="colorPrimaryDark">@color/text_gray</color>
     <color name="colorAccent">@color/wf_red</color>
 
+    <!-- icon color -->
+    <color name="icon_color_block">@color/wf_block</color>
+    <color name="icon_color_light">@color/icon_gray</color>
+
     <!--theme color-->
     <color name="icon_gray">#DADBDA</color>
     <color name="wf_white">#F9FAF9</color>
@@ -14,5 +18,9 @@
 
     <!--change default alert dialog button textColor -->
     <color name="accent_material_light" tools:override="true">@color/wf_red</color>
+
+    <!--ui toast-->
+    <color name="colorToastTextColor">@android:color/white</color>
+    <color name="colorToastBackgroundColor">@color/colorPrimaryDark</color>
 
 </resources>
