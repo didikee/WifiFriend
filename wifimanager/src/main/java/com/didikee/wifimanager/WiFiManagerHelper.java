@@ -143,8 +143,7 @@ public class WiFiManagerHelper implements IWifiManger {
 
     private OnWifiScanResultChangeListener wifiScanResultChangeListener;
 
-    public void setWifiScanResultChangeListener(OnWifiScanResultChangeListener
-                                                        wifiScanResultChangeListener) {
+    public void setWifiScanResultChangeListener(OnWifiScanResultChangeListener wifiScanResultChangeListener) {
         this.wifiScanResultChangeListener = wifiScanResultChangeListener;
     }
 }
