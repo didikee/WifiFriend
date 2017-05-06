@@ -1,15 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:tools="http://schemas.android.com/tools">
-    <color name="colorPrimary">@color/toolbar_gray</color>
-    <color name="colorPrimaryDark">@color/text_gray</color>
+    <!--<color name="colorPrimary">@color/toolbar_gray</color>
+    <color name="colorPrimaryDark">@color/text_gray</color>-->
     <color name="colorAccent">@color/wf_red</color>
+
+    <color name="colorPrimary">#F5F5F5</color>
+    <color name="colorPrimaryDark">#CDCDCD</color>
+   <!-- <color name="colorAccent">#009789</color>-->
+    <color name="colorBackground">#FAFAFA</color>
 
     <!-- icon color -->
     <color name="icon_color_block">@color/wf_block</color>
     <color name="icon_color_light">@color/icon_gray</color>
 
     <!--theme color-->
-    <color name="icon_gray">#DADBDA</color>
+    <color name="icon_gray">#9E9E9E</color>
     <color name="wf_white">#F9FAF9</color>
     <color name="wf_red">#FB575E</color>
     <color name="toolbar_gray">#DFE0DF</color>
@@ -21,6 +26,6 @@
 
     <!--ui toast-->
     <color name="colorToastTextColor">@android:color/white</color>
-    <color name="colorToastBackgroundColor">@color/colorPrimaryDark</color>
+    <color name="colorToastBackgroundColor">@color/wf_block</color>
 
 </resources>

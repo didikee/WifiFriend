@@ -8,4 +8,6 @@ package com.didikee.wififriend.constant;
 
 public class Config {
     public static final boolean Debug = true;
+    public static final String FILE_NAME = "wifi_pwd";
+    public static final String DIR_NAME = "wifiFriend";
 }
